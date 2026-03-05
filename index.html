@@ -38,42 +38,32 @@
       position:sticky; top:0; z-index:10;
       backdrop-filter: blur(10px);
       background: rgba(250,249,247,.92);
-      border-bottom: 2px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding: 16px 0;
-      gap: 24px;
+      padding:12px 0;
+      gap:14px;
     }
     .brand{
-      display:flex; align-items:center; gap: 14px;
-      text-decoration:none;
-    }
-    .brand img{
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    .brandText{
       display:flex; flex-direction:column; gap:2px;
+      text-decoration:none;
     }
     .brand strong{font-size:15px; letter-spacing:.2px}
     .brand span{font-size:12px; color:var(--muted)}
     .menu{
-      display:flex; gap: 20px;
-      flex-wrap:wrap;
+      display:flex; gap:14px; flex-wrap:wrap;
       align-items:center; justify-content:flex-end;
     }
     .menu a{
       text-decoration:none;
-      font-size: 14px;
+      font-size:13px;
       color:var(--muted);
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
     }
-    .menu a:hover{border-color: var(--accent); color:var(--text); background: rgba(139,154,133,.08)}
+    .menu a:hover{border-color:var(--line); color:var(--text); background: rgba(61,57,53,.04)}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:8px;
@@ -224,11 +214,8 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Joyforest">
-        <img src="assets/logo.png" alt="揪好森 Joyforest" width="48" height="48" />
-        <span class="brandText">
-          <strong>揪好森 Joyforest</strong>
-          <span>森林包場・派對聚會・圓頂帳篷住宿</span>
-        </span>
+        <strong>揪好森 Joyforest</strong>
+        <span>森林包場・派對聚會・圓頂帳篷住宿</span>
       </a>
 
       <nav class="menu" aria-label="主選單">
