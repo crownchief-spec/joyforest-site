@@ -1,29 +1,468 @@
-<!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-<head>
-<meta charset="utf-8">
-<title>Joyforest</title>
-</head>
-
-<body style="font-family:sans-serif;text-align:center;margin-top:80px">
-
-<h1>Joyforest</h1>
-
-<p>森林派對與戶外體驗空間</p>
-
-<p>桃園楊梅森林場地</p>
-
-<p>生日派對｜寵物聚會｜戶外活動</p>
-
-=======
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <title>測試</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>揪好森 Joyforest｜森林包場・派對聚會・圓頂帳篷住宿</title>
+  <meta name="description" content="揪好森 Joyforest｜桃園楊梅森林系包場場地。100坪單組包場圓頂帳篷（4-6人），也適合10-20人聚會、慶生、求婚、親子與寵物聚會。自助入住，草地、戶外廚房、投影串流、夜間燈光與柴火體驗。" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b2a1e" />
+  <style>
+    :root{
+      --bg:#071a13;
+      --panel:#0c2a1f;
+      --panel2:#0f3326;
+      --text:#e9f3ef;
+      --muted:#b9d2c8;
+      --line:rgba(233,243,239,.14);
+      --accent:#7af0c2;
+      --accent2:#b7ffd7;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 70% -20%, rgba(122,240,194,.22), transparent 55%),
+        radial-gradient(900px 500px at 10% 10%, rgba(183,255,215,.12), transparent 60%),
+        linear-gradient(180deg, #04110c, var(--bg) 35%, #040f0b);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(7,26,19,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      text-decoration:none;
+    }
+    .brand strong{font-size:15px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .menu{
+      display:flex; gap:14px; flex-wrap:wrap;
+      align-items:center; justify-content:flex-end;
+    }
+    .menu a{
+      text-decoration:none;
+      font-size:13px;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    .menu a:hover{border-color:var(--line); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(122,240,194,.35);
+      background: rgba(122,240,194,.12);
+      color:var(--text);
+      text-decoration:none;
+      box-shadow:none;
+      font-weight:600;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .btn:hover{background: rgba(122,240,194,.18); border-color: rgba(122,240,194,.55)}
+    .hero{
+      padding:42px 0 18px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .heroGrid{grid-template-columns:1fr}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(15,51,38,.9), rgba(12,42,31,.86));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size:34px;
+      line-height:1.2;
+      letter-spacing:.2px;
+    }
+    @media (max-width: 520px){
+      h1{font-size:28px}
+    }
+    .lead{color:var(--muted); font-size:15px; margin:0 0 16px}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .ghost{
+      background: transparent;
+      border:1px solid var(--line);
+      color:var(--text);
+    }
+    .ghost:hover{border-color: rgba(233,243,239,.3); background: rgba(0,0,0,.15)}
+    .mini{
+      display:grid; gap:12px;
+      height:100%;
+    }
+    .mini .tile{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      background: rgba(0,0,0,.16);
+    }
+    .tile b{display:block; margin-bottom:6px}
+    .tile p{margin:0; color:var(--muted); font-size:13px}
+    .section{padding:18px 0}
+    .section h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 900px){.grid3{grid-template-columns:1fr}}
+    .pill{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(183,255,215,.10);
+      border:1px solid rgba(183,255,215,.18);
+      color: var(--accent2);
+      font-size:12px;
+      margin-right:8px;
+      margin-bottom:8px;
+    }
+    .list{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .list li{margin:6px 0}
+    .priceRow{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px
+    }
+    .price{
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.16);
+      border-radius:14px;
+      padding:12px 14px;
+      min-width: 220px;
+    }
+    .price small{color:var(--muted)}
+    .price strong{display:block; font-size:18px; margin-top:4px}
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(0,0,0,.14);
+      padding:12px 14px;
+      margin:10px 0;
+    }
+    .faq summary{cursor:pointer; font-weight:700}
+    .faq p{margin:10px 0 0; color:var(--muted); font-size:14px}
+    footer{
+      padding:26px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:22px;
+    }
+    .footerGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){.footerGrid{grid-template-columns:1fr}}
+    .notice{
+      font-size:12px;
+      opacity:.9;
+      border:1px dashed rgba(233,243,239,.22);
+      border-radius:14px;
+      padding:12px 14px;
+      background: rgba(0,0,0,.10);
+    }
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
 </head>
+
 <body>
-  測試
->>>>>>> cb1e63c (Initial commit)
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Joyforest">
+        <strong>揪好森 Joyforest</strong>
+        <span>森林包場・派對聚會・圓頂帳篷住宿</span>
+      </a>
+
+      <nav class="menu" aria-label="主選單">
+        <a href="#glamping">住宿帳篷</a>
+        <a href="#party">森林派對</a>
+        <a href="#features">空間亮點</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn" href="#contact">立即詢問</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap heroGrid">
+        <div class="card">
+          <div class="kicker">🌲 單組包場｜約 100 坪森林草地｜桃園楊梅</div>
+          <h1>把森林借給你們一晚：<br/>住宿、聚會、派對都只屬於你們</h1>
+          <p class="lead">
+            揪好森是一處森林系包場場域：可選擇「圓頂帳篷住宿（4–6人）」或「森林聚會包場（10–20人）」。
+            不用與陌生人共享空間，自助入住、自由安排、盡情相聚。
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn" href="#contact">📩 私訊/填表詢問</a>
+            <a class="btn ghost" href="#party">🎉 看派對方案</a>
+            <a class="btn ghost" href="#glamping">⛺ 看住宿方案</a>
+          </div>
+
+          <div style="margin-top:14px">
+            <span class="pill">自助入住</span>
+            <span class="pill">草地活動空間</span>
+            <span class="pill">投影＋串流</span>
+            <span class="pill">夜間燈光</span>
+            <span class="pill">柴火體驗</span>
+          </div>
+        </div>
+
+        <aside class="mini">
+          <div class="tile">
+            <b>⛺ 圓頂帳篷住宿</b>
+            <p>4–6 人｜兩張雙人床｜17:00 入住 / 10:00 退房</p>
+          </div>
+          <div class="tile">
+            <b>🎉 森林聚會包場</b>
+            <p>10–20 人｜慶生/抓周/求婚/寵物聚會｜彈性時段</p>
+          </div>
+          <div class="tile">
+            <b>🍳 戶外廚房＋草地</b>
+            <p>可自備食材料理、聚餐聊天、佈置拍照與放鬆</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- GLAMPING -->
+    <section id="glamping" class="section">
+      <div class="wrap">
+        <h2>住宿方案｜圓頂帳篷（4–6人）</h2>
+        <div class="grid3">
+          <div class="card">
+            <div class="kicker">🛏 房內配置</div>
+            <ul class="list">
+              <li>兩張雙人床（可加床墊）</li>
+              <li>投影設備＋可串流（依現場設備）</li>
+              <li>夜間燈光氛圍、森林系空間</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="kicker">🌿 戶外與公共</div>
+            <ul class="list">
+              <li>約 100 坪單組包場草地活動空間</li>
+              <li>戶外廚房：可自炊、聚餐、聊天</li>
+              <li>柴火體驗（依現場規範使用）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="kicker">🕒 入住時間</div>
+            <ul class="list">
+              <li>入住：17:00</li>
+              <li>退房：10:00</li>
+              <li>本場域採自助入住，無餐點與管家服務</li>
+            </ul>
+
+            <div class="priceRow" aria-label="參考價格">
+              <div class="price">
+                <small>平日</small>
+                <strong>NT$ 4,800</strong>
+              </div>
+              <div class="price">
+                <small>假日</small>
+                <strong>NT$ 7,800</strong>
+              </div>
+            </div>
+
+            <p style="margin:10px 0 0; color:var(--muted); font-size:12px">
+              * 價格與入住規則以實際預訂回覆為準（可做活動或住宿檔期調整）。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTY -->
+    <section id="party" class="section">
+      <div class="wrap">
+        <h2>森林聚會｜派對包場（10–20人）</h2>
+        <div class="grid3">
+          <div class="card">
+            <div class="kicker">🎈 適合活動</div>
+            <ul class="list">
+              <li>生日慶生、抓周、朋友聚會</li>
+              <li>求婚/紀念日、親子活動</li>
+              <li>寵物聚會、森林拍照與佈置</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="kicker">🧩 使用方式</div>
+            <ul class="list">
+              <li>單組包場：空間只屬於你們</li>
+              <li>可自備餐食、飲料、佈置道具</li>
+              <li>提供草地＋戶外廚房＋氛圍燈光</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="kicker">💰 參考價格</div>
+            <div class="priceRow">
+              <div class="price">
+                <small>平日包場</small>
+                <strong>NT$ 4,800</strong>
+              </div>
+              <div class="price">
+                <small>假日包場</small>
+                <strong>NT$ 7,800</strong>
+              </div>
+            </div>
+            <p style="margin:10px 0 0; color:var(--muted); font-size:14px">
+              想做「分時段」也可以（例如早/午/晚三段），你要我再幫你把時段版直接寫進頁面也行。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="wrap">
+        <h2>空間亮點｜為了「好相聚」而設計</h2>
+        <div class="card">
+          <div>
+            <span class="pill">100坪單組包場</span>
+            <span class="pill">森林系氛圍</span>
+            <span class="pill">草地活動</span>
+            <span class="pill">戶外廚房</span>
+            <span class="pill">投影串流</span>
+            <span class="pill">夜間燈光</span>
+            <span class="pill">柴火體驗</span>
+          </div>
+          <ul class="list">
+            <li>你們可以把帳篷當作「休息與過夜」，把草地當作「活動主舞台」。</li>
+            <li>沒有過度打擾，適合想要自由安排流程、自己佈置、自己掌控節奏的人。</li>
+            <li>也很適合你用攝影專業做「森林主題派對＋拍照體驗」的延伸方案。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap">
+        <h2>FAQ｜常見問題</h2>
+        <div class="faq">
+          <details>
+            <summary>這裡是多人共用嗎？會遇到別組客人嗎？</summary>
+            <p>不會。揪好森採單組包場制：從帳篷到草地空間都只給你們一組使用。</p>
+          </details>
+          <details>
+            <summary>有提供餐點或管家服務嗎？</summary>
+            <p>目前以自助為主：無餐點、無管家。你們可自備食材並使用戶外廚房。</p>
+          </details>
+          <details>
+            <summary>可以辦慶生、抓周、求婚、寵物聚會嗎？</summary>
+            <p>可以。這類活動很適合森林草地＋包場空間；也可自帶佈置道具與流程安排。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="card">
+          <h2>立即詢問｜檔期與方案</h2>
+          <p class="lead" style="margin-bottom:10px">
+            先做測試版：你把這裡的聯絡方式換成你的（LINE/IG/表單/電話），就能上線跑流量了。
+          </p>
+
+          <div class="grid3">
+            <div class="tile">
+              <b>📌 建議你放的資訊</b>
+              <p class="mono">LINE: @yourline</p>
+              <p class="mono">IG: @joyforest____</p>
+              <p class="mono">Phone: 09xx-xxx-xxx</p>
+            </div>
+            <div class="tile">
+              <b>📝 你也可以放表單</b>
+              <p>把下方按鈕連到 Google Form / Typeform / Notion form 都可以。</p>
+              <p style="margin-top:10px">
+                <a class="btn" href="#" onclick="alert('把這個連結換成你的表單網址'); return false;">開啟預約表單</a>
+              </p>
+            </div>
+            <div class="tile">
+              <b>🧠 我建議的詢問格式</b>
+              <p>日期 / 人數 / 住宿或派對 / 是否需要佈置或投影 / 需求簡述</p>
+            </div>
+          </div>
+
+          <div class="notice" style="margin-top:14px">
+            小提醒：如果你想要更「平台友善」的版本（例如 SEO 關鍵字更兇、或中英文分區），我可以直接把這頁改成可用於部署的版本（含 Open Graph、結構化資料 Schema.org）。
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footerGrid">
+      <div>
+        <strong>揪好森 Joyforest</strong>
+        <div style="margin-top:6px">森林包場・派對聚會・圓頂帳篷住宿</div>
+        <div style="margin-top:10px; font-size:12px; opacity:.9">
+          © <span id="y"></span> Joyforest. All rights reserved.
+        </div>
+      </div>
+      <div class="notice">
+        <div><b>開發備註（給你自己看）</b></div>
+        <div style="margin-top:6px; font-size:12px">
+          1) 先用這個單頁測試上線 → 2) 再拆成次頁（住宿/派對/交通） → 3) 再加圖片與表單。<br/>
+          需要我幫你做成 Astro/Next 的架構（你在 Cursor 裡直接跑）也可以。
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
